@@ -115,7 +115,7 @@ $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 // Close the cURL session
 curl_close($ch);
 
-echo $respone;die;
+echo $response;die;
 
 if ($httpCode == 202) {
 //     echo "Email sent successfully!";
