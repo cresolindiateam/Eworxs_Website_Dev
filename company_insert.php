@@ -37,6 +37,18 @@ if (empty($error)) {
         $sql = "INSERT INTO companies (email,password,role,no_of_workers,verification_token,status,verification_status)
                 VALUES ('$email', '$password', 2, '$total_users', '$token', 1, 0)";
 
+
+if($conn)
+{
+    echo "hello";
+}
+else
+{
+    echo "hello not";
+}
+
+die;
+
         if ($conn->query($sql) === TRUE) {
             $success[] = "New record created successfully";
             $last_inserted_id[] = $conn->insert_id;
