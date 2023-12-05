@@ -41,6 +41,8 @@ if (empty($error)) {
 
 
         if ($conn->query($sql) === TRUE) {
+
+            echo "hello";
             $success[] = "New record created successfully";
             $last_inserted_id[] = $conn->insert_id;
 
@@ -116,10 +118,10 @@ curl_close($ch);
 
 
 if ($httpCode == 202) {
-//     echo "Email sent successfully!";
-// } else {
-//     echo "Error sending email: " . $response;
-// }
+   echo "Email sent successfully!";
+ } else {
+     echo "Error sending email: " . $response;
+ }
 
 
 
