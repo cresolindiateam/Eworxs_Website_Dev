@@ -3,7 +3,7 @@ name: PHP CI/CD Workflow
 on:
   push:
     branches:
-      - prod
+      - dev
       
 
 jobs:
