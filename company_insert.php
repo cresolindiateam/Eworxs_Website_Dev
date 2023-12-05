@@ -1,7 +1,7 @@
 <?php
-require("PHPMailer/src/PHPMailer.php");
-require("PHPMailer/src/SMTP.php");
-require("PHPMailer/src/Exception.php");
+require("devwebsite/PHPMailer/src/PHPMailer.php");
+require("devwebsite/PHPMailer/src/SMTP.php");
+require("devwebsite/PHPMailer/src/Exception.php");
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -38,22 +38,13 @@ if (empty($error)) {
                 VALUES ('$email', '$password', 2, '$total_users', '$token', 1, 0)";
 
 
-if($conn)
-{
-    echo "hello";
-}
-else
-{
-    echo "hello not";
-}
 
-die;
 
         if ($conn->query($sql) === TRUE) {
             $success[] = "New record created successfully";
             $last_inserted_id[] = $conn->insert_id;
 
-            $link = "<a href='http://eworxs.app/verify-email.php?key=$_POST[email]&token=$token'>Click and Verify Email</a>";
+            $link = "<a href='http://eworxs.app/devwebsite/verify-email.php?key=$_POST[email]&token=$token'>Click and Verify Email</a>";
 
             // $mail = new PHPMailer\PHPMailer\PHPMailer();
             // $mail->IsMail();
