@@ -1,13 +1,13 @@
 <?php
-require("devwebsite/PHPMailer/src/PHPMailer.php");
-require("devwebsite/PHPMailer/src/SMTP.php");
-require("devwebsite/PHPMailer/src/Exception.php");
+require("PHPMailer/src/PHPMailer.php");
+require("PHPMailer/src/SMTP.php");
+require("PHPMailer/src/Exception.php");
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-require 'devwebsite/dbconfig.php';
+require 'dbconfig.php';
 
 $error = [];
 $success = [];
